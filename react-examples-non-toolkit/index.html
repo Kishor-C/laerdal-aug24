@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- this is a root node, this node shows the entire application -->
+    <div id = "root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        let root = ReactDOM.createRoot(document.getElementById('root'));
+        function timer() {
+            root.render(<App />);
+        }
+        setInterval(timer, 3000);
+        // a component is a function or a class, component names must begin in uppercase
+        function App() {
+            let time = new Date().toLocaleTimeString();
+            return <div>
+                    <h3>Hello {time} update every 3s</h3>
+                </div>
+        }
+        
+    </script>
+</body>
+</html>
