@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import { DemoComponent, Greetings, HelloComponent, SimpleForm, SimpleLogin, SuccessComponent, UsersList } from './components/MyComponents'
 import {Link, Routes, Route} from 'react-router-dom';
+import { ComponentRoot } from './components/ComponentRoot';
 
 function App() {
   
@@ -15,6 +16,7 @@ function App() {
       <Link to='/hello' className='btn btn-primary btn-lg m-1'>Hello Component</Link>
       <Link to='/demo' className='btn btn-primary btn-lg m-1'>Demo Component</Link> 
       <Link to='/login' className='btn btn-primary btn-lg m-1'>Login Component</Link> 
+      <Link to='/context' className='btn btn-primary btn-lg m-1'>Context Counter</Link>
     </div>
     <div className='container-fluid'>
       <Routes>
@@ -28,6 +30,8 @@ function App() {
           element={<Greetings name="Atharv" age={20} dob={new Date('2003-10-25')} gender="M"/>}></Route>
         <Route path='success/:user' 
           element={<SuccessComponent />} />
+        <Route path='context' 
+          element={<ComponentRoot />} />
       </Routes>
     </div>
   </div>)
