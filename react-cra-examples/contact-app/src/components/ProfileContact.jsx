@@ -3,6 +3,9 @@ import {useEffect, useState} from 'react';
 import axios from "axios";
 const  BASE_URL = 'http://localhost:9999';
 
+
+
+
 export function ProfileSuccess() {
     let {id} = useParams();
     let [profile, setProfile]=useState({});
